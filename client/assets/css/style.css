@@ -712,8 +712,8 @@ button, input, textarea, select {
 .hero-brand-overlay {
     position: absolute;
 
-    top: 37%;
-    left: 67%;
+    top: 36%;
+    left: 56%;
 
     transform: translate(-50%, -50%);
 
@@ -1854,3 +1854,204 @@ textarea.form-control {
     }
 }
 
+/* ==========================================
+   COASTNOVA — MOBILE RESPONSIVE FIX
+   Desktop design remains unchanged
+========================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Hero section */
+    .hero {
+        min-height: auto;
+        height: auto;
+        padding-top: 7.5rem;
+        padding-bottom: 3rem;
+        align-items: stretch;
+        overflow: hidden;
+    }
+
+    /* Stack the content vertically */
+    .hero-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+        gap: 0;
+    }
+
+    /* Text content */
+    .hero-left {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        min-width: 0;
+        padding: 1.5rem 0 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Main heading */
+    .hero-heading {
+        font-size: clamp(2.4rem, 9.5vw, 3.6rem);
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+        margin: 1.5rem 0 1.5rem;
+        overflow-wrap: normal;
+    }
+
+    .hero-heading span {
+        display: block;
+        overflow: hidden;
+    }
+
+    /* Description */
+    .hero-paragraph {
+        width: 100%;
+        max-width: 100%;
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.75rem;
+    }
+
+    /* Buttons */
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-buttons a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 62px;
+        box-sizing: border-box;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    /* Technology names */
+    .hero-tech-strip {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem 1rem;
+        width: 100%;
+        padding-top: 1.25rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.7rem;
+        line-height: 1.8;
+    }
+
+    /* Building image appears BELOW the content */
+    .hero-right {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 280px;
+        min-height: 280px;
+        margin: 1.5rem 0 0;
+        padding: 0;
+        overflow: hidden;
+        border-radius: 12px;
+        clip-path: none;
+        z-index: 1;
+    }
+
+    .hero-img-wrap {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .hero-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: none;
+    }
+
+    /* Softer image overlay on mobile */
+    .hero-img-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0.55) 100%
+        );
+    }
+
+    /* Hide the oversized duplicate hero branding on mobile.
+       The CoastNova logo remains in the navigation bar. */
+    /* Show CoastNova branding on mobile */
+.hero-brand-overlay {
+    display: flex !important;
+
+    position: absolute;
+
+    top: 45%;
+    left: 55%;
+
+    width: 100%;
+
+    transform: translate(-50%, -50%);
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+
+    text-align: center;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+/* Resize the logo for mobile */
+.hero-logo-img {
+    display: block;
+
+    width: 150px;
+    max-width: 60%;
+
+    height: auto;
+
+    object-fit: contain;
+
+    margin: 0 auto;
+}
+
+/* Brand name */
+.hero-brand-name {
+    font-size: 1.6rem;
+
+    letter-spacing: -0.05rem;
+
+    margin-top: -0.5rem;
+}
+
+/* Technologies text */
+.hero-brand-line-text {
+    font-size: 0.7rem;
+
+    letter-spacing: 0.15em;
+
+    margin-top: 0;
+}
+
+.hero-brand-line-text::before,
+.hero-brand-line-text::after {
+    width: 25px;
+}
+}
